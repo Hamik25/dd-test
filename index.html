@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>DD</title>
+
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+
+		<script src="js/jquery.bdt.min.js"></script>
+		<link href="jquery.bdt.min.css" rel="stylesheet">
+		<script src="js/jquery.sortelements.js"></script>
+
+
+		
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card card-block" style="margin-top: 50px;">
+						<div class="col-md-12">
+							<div class="alert alert-success hide" role="alert" id="sucess-alert"> 
+								<strong>Well done!</strong> Process is finished. 
+							</div>
+							<div class="alert alert-info hide" role="alert" id="info-alert">
+								<strong>Heads up!</strong> Process is started please wait
+							</div>
+						</div>
+						<div class="form-group col-md-10">
+						    <label for="request-url-input">Request URL</label>
+						    <input type="text" class="form-control" id="request-url-input" placeholder="Input Request URL">
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+							    <label for="request-method-input">Request Method</label>
+							    <div class="btn-group" role="group" aria-label="..." id="request-method-input">
+								  <button type="button" class="btn btn-default active" data-value="GET">GET</button>
+								  <button type="button" class="btn btn-default" data-value="POST">POST</button>
+								</div>
+							</div>
+						</div>		
+						<div class="form-group col-md-12">
+						    <label for="request-count-input">Request Header</label>
+						    <textarea class="form-control" rows="2" id="request-headers-input" placeholder="Input Request Headers"></textarea>
+						</div>
+						<div class="form-group col-md-12">
+						    <label for="request-count-input">Request Body</label>
+						    <textarea class="form-control" rows="4" id="request-body-input" placeholder="Input Request Body"></textarea>
+						</div>
+						<div class="form-group col-md-12">
+						    <label for="request-count-input">Request Count</label>
+						    <input type="number" class="form-control" id="request-count-input" placeholder="Input Request Count">
+						</div>
+						<div class="col-md-2">
+							<button type="button" class="btn btn-info" id="start-request-btn">Start Request</button>
+						</div>
+					</div>
+
+					<table class="table table-hover table-striped bdt" id="response-table"> 
+						<thead> 
+							<tr>
+								<th>
+									<span class="sort-element">Status Code</span>
+									<span class="sort-icon fa fa-angle-up"></span>
+								</th>
+								<th>
+									<span class="sort-element">Status Name</span>
+									<span class="sort-icon fa fa-angle-up"></span>
+								</th>
+							</tr> 
+						</thead> 
+						<tbody id="response-list"> 
+							
+						</tbody> 
+					</table>
+				</div>			
+				
+			</div>
+
+			
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
