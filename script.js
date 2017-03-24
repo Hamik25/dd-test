@@ -61,9 +61,9 @@ $(document).ready(function() {
       return function(index) {
         $.ajax({
           url: url,
-          beforeSend: function(request) {
-            request.setRequestHeader(headers);
-          },
+          // beforeSend: function(request) {
+          //   request.setRequestHeader(headers);
+          // },
           method: method
         })
         .done(doneFunction);
